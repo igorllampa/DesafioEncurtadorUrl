@@ -1,5 +1,9 @@
 package com.igorllampa.desafio.domain.repository;
 
-public class UrlRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.igorllampa.desafio.domain.model.Url;
+
+public interface UrlRepository extends JpaRepository<Url, Long> {
 
 }
