@@ -1,6 +1,7 @@
 package com.igorllampa.desafio.domain.model;
 
 import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +28,7 @@ public class Url {
 	@Size(max = 200)
 	private String urlEncurtada;
 	
-	private LocalDateTime dataCriacao;
+	private OffsetDateTime dataCriacao;
 	
 	private Long statusClicks;
 
@@ -63,11 +64,11 @@ public class Url {
 		this.urlEncurtada = urlEncurtada;
 	}
 
-	public LocalDateTime getDataCriacao() {
+	public OffsetDateTime getDataCriacao() {
 		return dataCriacao;
 	}
 
-	public void setDataCriacao(LocalDateTime dataCriacao) {
+	public void setDataCriacao(OffsetDateTime dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
 
