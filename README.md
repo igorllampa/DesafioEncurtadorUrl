@@ -31,3 +31,4 @@ URL: //ENDERECO/encurtador/listar
 
 Obs: a tabela criada no banco de dados para armazenamento dos dados encontra-se no diretório: ../resources/db/migration/V001__cria-tabela-url.sql. 
 Ao executar o projeto ela é criada automaticamente pelo Flyway.
+
