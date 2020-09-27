@@ -39,9 +39,9 @@ public class UrlController {
 		return urlRepository.findByIdUsuario(idUsuario);
 	}
 
-	@GetMapping("/listar/{urlEncurtada}")
+	@GetMapping("/{urlEncurtada}")
 	public List<Url> listarUrlDetalhada(@PathVariable String urlEncurtada){		
-		return urlRepository.findByIdUsuario(urlEncurtada);
+		return urlRepository.findByUrlEncurtada(urlEncurtada);
 	}
 	
 	@RequestMapping(value = "/gerador", method = RequestMethod.POST,
@@ -49,6 +49,5 @@ public class UrlController {
 	public @ResponseBody Url gerarUrl(@RequestBody Url url) {							
 		return cadastroUrlService.salvar(url);		
 	}
-	
-	
+		
 }
