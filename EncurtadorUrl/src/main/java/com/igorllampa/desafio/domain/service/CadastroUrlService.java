@@ -17,18 +17,17 @@ public class CadastroUrlService {
 
 	@Autowired
 	private UrlRepository urlRepository;
-		
-	private Util util;
 	
-	public Url salvar(String idUsuario, String urlOriginal) {
-		
-		Url url = new Url();
-		url.setIdUsuario(idUsuario);
-		url.setUrlOriginal(urlOriginal);		
-		url.setUrlEncurtada("teste");		
+	
+	
+	public Url salvar(Url url) {
+			
+		Util util = new Util();
+				
+		url.setUrlEncurtada(util.geraUrlEncurtada());		
 		url.setDataCriacao(OffsetDateTime.now());		
-		url.setStatusClicks(Long.valueOf("15"));
-		
+		url.setStatusClicks(util.numeroRandomico());
+						
 		return urlRepository.save(url);
 	}
 		
